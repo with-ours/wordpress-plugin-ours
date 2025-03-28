@@ -55,19 +55,16 @@ function ours_add_settings_page() {
 }
 add_action('admin_menu', 'ours_add_settings_page');
 
-// Sanitize the token input
-function ours_sanitize_token($input) {
-    // Remove any whitespace and potentially harmful characters
-    return sanitize_text_field(trim($input));
-}
 
 // Register settings
 function ours_register_settings() {
     register_setting(
-        'ours_privacy_settings',
+        'ours_privacy_settings', // Use a static string instead of calling sanitize_key()
         'ours_privacy_token',
         array(
-            'sanitize_callback' => 'ours_sanitize_token'
+            'type'              => 'string',
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => ''
         )
     );
 }
