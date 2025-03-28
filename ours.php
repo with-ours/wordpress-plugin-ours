@@ -4,8 +4,6 @@
  * Plugin URI: https://oursprivacy.com
  * Description: A custom plugin that loads the Ours Privacy Web SDK
  * Version: 1.0.0
- * Author: Ours Privacy
- * Author URI: https://oursprivacy.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: ours-privacy
