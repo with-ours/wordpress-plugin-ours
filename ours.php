@@ -59,7 +59,7 @@ add_action('admin_menu', 'ours_add_settings_page');
 // Register settings
 function ours_register_settings() {
     register_setting(
-        'ours_privacy_settings', // Use a static string instead of calling sanitize_key()
+        'ours_privacy_settings',
         'ours_privacy_token',
         array(
             'type'              => 'string',
@@ -69,6 +69,7 @@ function ours_register_settings() {
     );
 }
 add_action('admin_init', 'ours_register_settings');
+
 
 // Settings page HTML
 function ours_settings_page() {
